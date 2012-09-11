@@ -8,5 +8,5 @@ class Rectangle(
     val height:Double, 
     c:Color) extends Shape(c) {
  override def area:Double = width*height
- override def perimeter:Double 2*(width+height)
+ override def perimeter:Double = 2*(width+height)
 }

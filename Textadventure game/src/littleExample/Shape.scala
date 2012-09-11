@@ -3,10 +3,10 @@ package littleExample
 import java.awt.Color
 import java.awt.Graphics2D
 
-class Shape(private val color:Color) {
+abstract class Shape(private val color:Color) {
   def area:Double 
   def perimeter:Double 
-  def draw(g:Graphics2D):Unit {}
+  //def draw(g:Graphics2D):Unit {}
 }
 
 
