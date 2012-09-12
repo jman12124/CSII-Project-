@@ -1,13 +1,14 @@
 package game
 
 import java.awt.Color
+import java.awt.Dimension
 import java.awt.Graphics2D
+
 import scala.swing.MainFrame
 import scala.swing.Panel
-import java.awt.Dimension
-import scala.swing.event.KeyPressed
 
 object GameMain {
+  var Enemies = List[enemy]()
   val gamePanel = new Panel {
     override def paint(g: Graphics2D) {
       g.setPaint(Color.white)
@@ -32,14 +33,6 @@ listenTo(mouse.clicks,mouse.moves,keys)
     frame.open
   }
 }
-//  else if(pcRules=="pocket")
-//        println(pocket)
-//  else {
-//        if(inventory.contains("knife"))
-//        if(exit.isEmpty)
-//        println("IT'S A TRAP!!!!!!!!!!\n")
-//        else nowRoom = map(nowRoom.newnumber(nowRoom.pi.indexOf(troll)))
-//  }
 //while (troll != "have a nice day ")
 //}
 //}
