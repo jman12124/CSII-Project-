@@ -1,25 +1,24 @@
 package game
 
+import java.awt.Graphics2D
+import java.awt.Color
+import java.awt.geom.Rectangle2D
+
 
 abstract class Enemies (attacker:Int, defense :Int)
 
 //object GameMain extends ("Text adventure game")
 
-class enemy {
+class enemy { 
   val enemy_radius =  ("enemy.radius", 15)
   val num_enemies = ("enemy.amount", 50)
-}
   
-//private val Enemies = ArrayBuffer[Enemy]()
-
-init{
-  
-for (i <- 1 to num_enemies) enemies += new Enemy()
-	action {
-  if(!player.isAlive) pause()
-  val dead_enemies = enemies.filter(!_.isAlive)
-  enemies --=dead_enemies
-  if(enemies.size < math.random*num_enemies) enemies += new Enemy()
  
-	}
+
+  override def paint (g:Graphics2D) {
+    g.setPaint (Color.white)
+    g.fill (new Rectangle2D.Double (0,0,size.width,size.height))
+    val //panda = ImageIO.read(new File("panda.jpg"))
+    
+  }
 }
