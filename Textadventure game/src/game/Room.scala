@@ -3,6 +3,7 @@ package game
 import xml._
 
 class Room(name:String, description:String, roomnumber:Int,exits:Seq[Exit]) {
+  // Another test.
   def toXML:Node = 
     <room name={name} roomnumber={roomnumber.toString}>
 		<description>{description}</description>
