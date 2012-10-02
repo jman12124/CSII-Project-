@@ -2,41 +2,62 @@
 
 <House>
 	<room name="dark room" roomnumber="1">
-		<description>
-		you are in a dark room and there is nothing here except skeletons
-		</description>
+		<description>you wake up in a dark room and you dont remember who you are. You have a feeling that you need to get out of this place or something bad might happen to you</description>
+		<exit dest="2" dir="north"/>
 	</room>
-	<room2 name="colorful room" room2number2="2">
-		<description>
-		you are in a colorful room. WTF just happen?"
-		</description>
-	</room2>
-	<room3 name="normal room" room3number3="3">
-		<description>
-		just a normal room there is nothing to see here
-		</description>
-	</room3>
-	<room4 name="twilight room" room4number4="4">
-		<description>
-			you just enter the twilight zone where everything is messed up 
-			and no not the one with sparkily vampires and werewolves 
-		</description>
-	</room4>
-	<room5 name="game room" room5number5="5">
-		<description>
-			there are a lot of classic arcade video games here but  
-			there is no exit here
-		</description>
-	</room5>
-	<room6 name="doll room" room6number6="6">
-		<description>
-			you are surrounded by creepy looking dolls hopefully they are not chucky	
-		</description>
-	</room6>
-	<room7 name="empty room" room7number7="7">
-		<description>
-			there is nothing here really except a big ball
-		</description>	
-	</room7>
+	<room name="colorful room" roomnumber="2">
+		<description>you are in a colorful room. but the colors are to overwhelming to look at directly</description>
+		<exit dest="3" dir="east"/>
+		<exit dest="4" dir="west"/>
+	</room>
+	<room name="normal room" roomnumber="3">
+		<description>just a normal room there is nothing to see here</description>
+		<exit dest="2" dir="west"/>
+	</room>
+	<room name="twilight room" roomnumber="4">
+		<description>you just enter the twilight zone where everything is messed up 
+and no not the one with sparkily vampires and werewolves</description>
+		<exit dest="2" dir="east"/>	
+	</room>
+	<room name="game room" roomnumber="5">
+		<description>there are a lot of classic arcade video games here but there is no exit here</description>
+		<exit dest="2" dir="south"/>
+		<exit dest="7" dir="west"/>
+		<exit dest="8" dir="north"/>
+		<exit dest="6" dir="east"/>
+	</room>
+	<room name="doll room" roomnumber="6">
+		<description>you are surrounded by creepy looking dolls that came from the 60's some of the dolls have knives</description>
+		<exit dest="9" dir="east"/>
+	</room>
+	<room name="empty room" roomnumber="7">
+		<description>this room is completly white but you notice a few red marks on the wall that has been smudged and it looks fresh</description>
+		<exit dest="5" dir="east"/>
+	</room>
 	
+	<room name="empty room" roomnumber="8">
+		<description>there is nothing here its been cleaned out years ago only thing here is dust bunnies</description>	
+		<exit dest="5" dir="south"/>
+	</room>
+	<room name="errie room" roomnumber="9">
+	<description>you have a creepy feeling that someone is watching you from behind you dont know where but you need to keep moving on</description>
+		<exit dest="10" dir="north"/>
+		<exit dest="6" dir="west"/>
+	</room>
+	<room name="creepy clown" roomnumber="10">
+	<description>as soon as you walk into this room you notice there are stuffed clowns that are grinning creepily you want to get out of this room creepy clowns are no joke</description>
+		<exit dest="11" dir="north"/>
+		<exit dest="9" dir="south"/>
+	</room>
+	<room name="chain room" roomnumber="11">
+	<description>you quickly get into the next room trying to get away far from those clowns and you noticed that there are a lot of chains hanging from the ceiling and have hooks on them</description>
+		<exit dest="10" dir="south"/>
+		<exit dest="12" dir="west"/>
+	</room>
+	<room name="next floor" roomnumber="12">
+	<description> you finally managed to find some sort of path that might lead you out of this place do you want to go?</description>
+		<exit dest="13" dir="up"/>
+		<exit dest="11" dir="south"/>
+	</room>
+		
 </House>

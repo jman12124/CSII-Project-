@@ -6,8 +6,8 @@ import java.io.File
 
 import javax.imageio.ImageIO
 
-//player attack and defence against the AI
-abstract class Player (attack:Int, defense :Int){
+//player walks around the house trying to find things only have one life but have multiple players with him/her
+abstract class Player (){
   
 }
 

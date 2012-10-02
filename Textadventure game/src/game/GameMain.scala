@@ -12,7 +12,7 @@ object GameMain {
 listenTo(mouse.clicks,mouse.moves,keys)
 	reactions += {
      case mouseClicked => // char movement 
-		
+	// def update {} ??
    }
   }
 
