@@ -19,4 +19,5 @@ object Room {
     val exits = (xml \ "exit").map(Exit(_))
     new Room(name,desc,number,exits)
   } 
+  // Does this commit
 }
