@@ -1,12 +1,16 @@
 package player
 
-import scala.io.Source 
-import scala.xml._
+import scala.swing.event.KeyPressed
+import scala.swing.event.KeyEvent
 
-class playerMovement (val PanelSize:Int, var playerx:Int, var playery:Int) {
-
-
+class playerMovement (val PanelSize:Int, var playerw:String, var playera:String, var players:String, var playerd:String) {
 //var playerMovement = List[PlayerMovement]()
+
+
+
+
+}
+
 
 //val PanelSize = new text 
 
@@ -15,6 +19,3 @@ class playerMovement (val PanelSize:Int, var playerx:Int, var playery:Int) {
 //	var playery = new TextField("playery")
 //	var leftPressed = new TextField("leftPressed")
 //	var rightPressed = new TextField("rightpressed")
-
-	
-}
