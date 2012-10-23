@@ -2,7 +2,7 @@ package game
 
 import xml._
 
-class Room(name:String, description:String, roomnumber:Int,exits:Seq[Exit]) {
+class Room(name:String, description:String, roomnumber:Int,exits:Seq[Exit],North:Int,South:Int,East:Int,West:Int,Up:Int,Down:Int) {
   def toXML:Node = 
     <room name={name} roomnumber={roomnumber.toString}>
 		<description>{description}</description>
@@ -17,6 +17,13 @@ object Room {
     val desc = (xml \ "description").text
     val number = (xml \ "@roomnumber").text.toInt
     val exits = (xml \ "exit").map(Exit(_))
-    new Room(name,desc,number,exits)
+    val North = (xml \ "@North").text.toInt
+    val South = (xml \ "@South").text.toInt
+    val East = (xml \ "@East").text.toInt
+    val West = (xml \ "@West").text.toInt
+    val Up = (xml \ "@Up").text.toInt
+    val Down = (xml \ "@Down").text.toInt
+ 
+    new Room(name,desc,number,exits,North,South,East,West,Up,Down)
   } 
 }

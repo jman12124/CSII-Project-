@@ -1,6 +1,6 @@
 package eclass
 
-class User(
+class Users(
     val username:String,
     private var name:String,
     private var password:String,

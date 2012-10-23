@@ -3,6 +3,7 @@ package game
 import xml._
 
 class Exit() {
+  
   def toXML:Node = <exit></exit>
 }
 

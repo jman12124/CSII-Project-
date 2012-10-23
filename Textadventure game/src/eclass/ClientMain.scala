@@ -1,22 +1,15 @@
 package eclass
 
-import scala.swing.Action
-import scala.swing.BorderPanel
-import scala.swing.BorderPanel.Position.West
-import scala.swing.Dimension
-import scala.swing.GridPanel
-import scala.swing.ListView
-import scala.swing.MainFrame
-import scala.swing.Menu
-import scala.swing.MenuBar
-import scala.swing.MenuItem
-import scala.swing.ScrollPane
-import scala.swing.Separator
+import scala.swing._
+import scala.swing.BorderPanel.Position._
+import scala.swing.BorderPanel._
+import event._
+
 
 object ClientMain {
   val semesterList = new ListView[Semester]()
   val courseList = new ListView[Course]()
-  val instructorMenu = new Menu("Instructor Options") {
+  val InstructorMenu = new Menu("Instructor Options") {
     contents += new MenuItem(Action("add Semester")(addSemester))
     contents += new MenuItem(Action("add Course")(addCourse))
     enabled = false
@@ -34,22 +27,58 @@ object ClientMain {
       contents += new Menu("File") {
         contents += new MenuItem(Action("Login") {
           login
-          instructorMenu.enabled = true
+          InstructorMenu.enabled = true
         })
         contents += new Separator
         contents += new MenuItem(Action("Exit")(sys.exit(0)))
       }
-      contents += instructorMenu
+      contents += InstructorMenu
     }
     size = new Dimension(980, 600)
     centerOnScreen
   }
 
   def login {
+    var username = ""
+    var password = ""
+      
     // TODO 
-    semesterList.listData = ServerMain.getSemester()
-  }
+    val dialog = new Dialog {
+      title = "Login"
+        modal = true
+        val usernameField = new TextField
+        val passwordField = new PasswordField
+        contents = new GridPanel(3,1) {
+        contents += new BorderPanel {
+    	layout += new Label("Username") -> West
+    	layout += usernameField -> Center
+    	  }
+         contents += new BorderPanel {
+    	layout += new Label("Password") -> West
+    	layout += passwordField -> Center
+    	  } 
+         contents += new FlowPanel {
+           contents += Button("Done"){
+             username = usernameField.text
+             password = passwordField.password.mkString
+             close
+             dispose
+           }
+           contents += Button("Cancel"){
+             close
+             dispose
+           }
+         }
+      }
+     centerOnScreen
+    }
+    dialog.open
 
+  if(ServerMain.validUser(username, password)) {
+   semesterList.listData = ServerMain.getSemester()
+     }
+  	}
+  
   def addSemester {
     //todo
 
