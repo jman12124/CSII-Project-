@@ -1,5 +1,0 @@
-package eclass
-
-class Course {
-
-}

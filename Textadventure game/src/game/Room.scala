@@ -9,6 +9,13 @@ class Room(name:String, description:String, roomnumber:Int,exits:Seq[Exit],North
 	</room>
 		
   override def toString = name+"\n"+description
+
+  def descPrint(user:Player) {
+    user.println("")
+    user.println("you are in the" + name + ", " +
+        description)
+    
+  }
 }
 
 object Room {

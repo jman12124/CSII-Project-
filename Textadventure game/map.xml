@@ -1,8 +1,7 @@
 
-
 <House>
 	<room name="dark room" roomnumber="1">
-		<description>you wake up in a dark room and you dont remember who you are. You have a feeling that you need to get out of this place or something bad might happen to you</description>
+		<description>you wake up in a dark room and you don't remember who you are. You have a feeling that you need to get out of this place or something bad might happen to you</description>
 		<exit dest="2" dir="north"/>
 	</room>
 	<room name="colorful room" roomnumber="2">
@@ -40,7 +39,7 @@ and no not the one with sparkily vampires and werewolves</description>
 		<exit dest="5" dir="south"/>
 	</room>
 	<room name="errie room" roomnumber="9">
-	<description>you have a creepy feeling that someone is watching you from behind you dont know where but you need to keep moving on</description>
+	<description>you have a creepy feeling that someone is watching you from behind you don't know where but you need to keep moving on</description>
 		<exit dest="10" dir="north"/>
 		<exit dest="6" dir="west"/>
 	</room>
