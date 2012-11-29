@@ -1,59 +1,61 @@
 
 <House>
-	<room name="dark room" roomnumber="1">
-		<description>you wake up in a dark room and you don't remember who you are. You have a feeling that you need to get out of this place or something bad might happen to you</description>
+	<room name="dark room" roomnumber="1" North="2" South="-1" East="-1" West="-1" Up="-1" Down="-1">
+		<description>you wake up and you don't remember who you are. 
+You have a feeling that you need to get out of this place or something bad might happen to you.</description>
 		<exit dest="2" dir="north"/>
 	</room>
-	<room name="colorful room" roomnumber="2">
+	<room name="colorful room" roomnumber="2" North="-1" South="1" East="3" West="4" Up="-1" Down="-1">
 		<description>you are in a colorful room. but the colors are to overwhelming to look at directly</description>
 		<exit dest="3" dir="east"/>
 		<exit dest="4" dir="west"/>
+		<exit dest="1" dir="south"/>
 	</room>
-	<room name="normal room" roomnumber="3">
+	<room name="normal room" roomnumber="3" North="-1" South="-1" East="-1" West="2" Up="-1" Down="-1">
 		<description>just a normal room there is nothing to see here</description>
 		<exit dest="2" dir="west"/>
 	</room>
-	<room name="twilight room" roomnumber="4">
+	<room name="twilight room" roomnumber="4" North="-1" South="-1" East="2" West="-1" Up="-1" Down="-1">
 		<description>you just enter the twilight zone where everything is messed up 
 and no not the one with sparkily vampires and werewolves</description>
 		<exit dest="2" dir="east"/>	
 	</room>
-	<room name="game room" roomnumber="5">
+	<room name="game room" roomnumber="5" North="8" South="2" East="6" West="7" Up="-1" Down="-1">
 		<description>there are a lot of classic arcade video games here but there is no exit here</description>
 		<exit dest="2" dir="south"/>
 		<exit dest="7" dir="west"/>
 		<exit dest="8" dir="north"/>
 		<exit dest="6" dir="east"/>
 	</room>
-	<room name="doll room" roomnumber="6">
+	<room name="doll room" roomnumber="6" North="-1" South="-1" East="9" West="-1" Up="-1" Down="-1">
 		<description>you are surrounded by creepy looking dolls that came from the 60's some of the dolls have knives</description>
 		<exit dest="9" dir="east"/>
 	</room>
-	<room name="empty room" roomnumber="7">
+	<room name="empty room" roomnumber="7" North="-1" South="1" East="5" West="-1" Up="-1" Down="-1">
 		<description>this room is completly white but you notice a few red marks on the wall that has been smudged and it looks fresh</description>
 		<exit dest="5" dir="east"/>
 	</room>
 	
-	<room name="empty room" roomnumber="8">
+	<room name="empty room" roomnumber="8" North="-1" South="1" East="5" West="-1" Up="-1" Down="-1">
 		<description>there is nothing here its been cleaned out years ago only thing here is dust bunnies</description>	
 		<exit dest="5" dir="south"/>
 	</room>
-	<room name="errie room" roomnumber="9">
+	<room name="errie room" roomnumber="9" North="10" South="-1" East="-1" West="6" Up="-1" Down="-1">
 	<description>you have a creepy feeling that someone is watching you from behind you don't know where but you need to keep moving on</description>
 		<exit dest="10" dir="north"/>
 		<exit dest="6" dir="west"/>
 	</room>
-	<room name="creepy clown" roomnumber="10">
+	<room name="creepy clown" roomnumber="10" North="11" South="9" East="-1" West="-1" Up="-1" Down="-1">
 	<description>as soon as you walk into this room you notice there are stuffed clowns that are grinning creepily you want to get out of this room creepy clowns are no joke</description>
 		<exit dest="11" dir="north"/>
 		<exit dest="9" dir="south"/>
 	</room>
-	<room name="chain room" roomnumber="11">
+	<room name="chain room" roomnumber="11" North="-1" South="10" East="-1" West="12" Up="-1" Down="-1">
 	<description>you quickly get into the next room trying to get away far from those clowns and you noticed that there are a lot of chains hanging from the ceiling and have hooks on them</description>
 		<exit dest="10" dir="south"/>
 		<exit dest="12" dir="west"/>
 	</room>
-	<room name="next floor" roomnumber="12">
+	<room name="next floor" roomnumber="12" North="-1" South="11" East="-1" West="-1" Up="13" Down="-1">
 	<description> you finally managed to find some sort of path that might lead you out of this place do you want to go?</description>
 		<exit dest="13" dir="up"/>
 		<exit dest="11" dir="south"/>

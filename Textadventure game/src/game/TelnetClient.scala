@@ -5,10 +5,8 @@ import scala.actors.Actor
 
 object TelnetClient {
   def main(args:Array[String]) {
-    println("What host machine?")
-    val host = readLine
-    println("What port?")
-    val port = readInt
+    val host = "localhost" 
+    val port = 4243 
     val sock = new Socket(host,port)
     val is = sock.getInputStream
     val os = sock.getOutputStream
